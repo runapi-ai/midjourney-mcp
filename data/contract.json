@@ -1,0 +1,139 @@
+{
+  "catalog_models": [
+    "midjourney-edit-image",
+    "midjourney-image-to-video",
+    "midjourney-v8.1"
+  ],
+  "actions": {
+    "midjourney/edit-image": {
+      "model": "Midjourney",
+      "endpoint": "edit_image",
+      "task_type": "asynchronous",
+      "models": [
+        "midjourney-edit-image"
+      ],
+      "fields_by_model": {
+        "midjourney-edit-image": {
+          "model": {
+            "type": "string"
+          },
+          "prompt": {
+            "type": "string",
+            "required": true
+          },
+          "source_image_url": {
+            "type": "string",
+            "required": true
+          },
+          "mask_url": {
+            "type": "string"
+          },
+          "include_split_images": {
+            "type": "boolean",
+            "default": false
+          },
+          "callback_url": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "midjourney/get-seed": {
+      "model": "Midjourney",
+      "endpoint": "get_seed",
+      "task_type": "synchronous",
+      "models": [],
+      "fields_by_model": {
+        "_": {
+          "image_id": {
+            "type": "string",
+            "required": true
+          }
+        }
+      }
+    },
+    "midjourney/image-to-prompt": {
+      "model": "Midjourney",
+      "endpoint": "image_to_prompt",
+      "task_type": "synchronous",
+      "models": [],
+      "fields_by_model": {
+        "_": {
+          "source_image_url": {
+            "type": "string",
+            "required": true
+          }
+        }
+      }
+    },
+    "midjourney/image-to-video": {
+      "model": "Midjourney",
+      "endpoint": "image_to_video",
+      "task_type": "asynchronous",
+      "models": [
+        "midjourney-image-to-video"
+      ],
+      "fields_by_model": {
+        "midjourney-image-to-video": {
+          "model": {
+            "type": "string"
+          },
+          "prompt": {
+            "type": "string"
+          },
+          "source_image_url": {
+            "type": "string",
+            "required": true
+          },
+          "last_frame_image_url": {
+            "type": "string"
+          },
+          "output_resolution": {
+            "type": "string",
+            "enum": [
+              "480p"
+            ],
+            "default": "480p"
+          },
+          "enable_loop": {
+            "type": "boolean",
+            "default": false
+          },
+          "callback_url": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "midjourney/text-to-image": {
+      "model": "Midjourney",
+      "endpoint": "text_to_image",
+      "task_type": "asynchronous",
+      "models": [
+        "midjourney-v8.1"
+      ],
+      "fields_by_model": {
+        "midjourney-v8.1": {
+          "model": {
+            "type": "string"
+          },
+          "prompt": {
+            "type": "string",
+            "required": true
+          },
+          "enable_prompt_translation": {
+            "type": "boolean",
+            "default": false
+          },
+          "include_split_images": {
+            "type": "boolean",
+            "default": false
+          },
+          "callback_url": {
+            "type": "string"
+          }
+        }
+      }
+    }
+  }
+}

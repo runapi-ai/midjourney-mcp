@@ -1,0 +1,11 @@
+{
+  "mcpServers": {
+    "midjourney": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@runapi.ai/midjourney-mcp"
+      ]
+    }
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "servers": {
+    "midjourney": {
+      "type": "stdio",
+      "command": "npx",
+      "args": [
+        "-y",
+        "@runapi.ai/midjourney-mcp"
+      ]
+    }
+  }
+}
