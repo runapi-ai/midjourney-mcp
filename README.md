@@ -30,7 +30,7 @@
 ## Why This Package?
 
 `@runapi.ai/midjourney-mcp` is a focused Model Context Protocol server for the **Midjourney** model line on RunAPI.
-It gives MCP-compatible assistants direct access to 5 endpoints and 3 model variants without loading the full RunAPI catalog.
+It gives MCP-compatible assistants direct access to 6 endpoints and 3 model variants without loading the full RunAPI catalog.
 
 Use this per-model server when an agent should stay scoped to Midjourney. Use [`@runapi.ai/mcp`](https://github.com/runapi-ai/mcp) when one assistant should discover every RunAPI model line.
 
@@ -78,6 +78,7 @@ Ready-made examples are in [`examples/`](examples/) for Claude, Cursor, Windsurf
 | `get_seed` | Yes | Run a Midjourney get seed operation synchronously. Returns the operation result and pricing snapshot. |
 | `image_to_prompt` | Yes | Run a Midjourney image to prompt operation synchronously. Returns the operation result and pricing snapshot. |
 | `image_to_video` | Yes | Create a Midjourney image to video task and optionally wait for a terminal status. Returns the task id, status, output URLs, and pricing snapshot. |
+| `shorten_prompt` | Yes | Run a Midjourney shorten prompt operation synchronously. Returns the operation result and pricing snapshot. |
 | `text_to_image` | Yes | Create a Midjourney text to image task and optionally wait for a terminal status. Returns the task id, status, output URLs, and pricing snapshot. |
 | `get_task` | Yes | Fetch the current status and latest payload for an existing task. |
 | `check_pricing` | No | Look up the current pricing snapshot for a Midjourney model and endpoint. |
@@ -86,7 +87,7 @@ Ready-made examples are in [`examples/`](examples/) for Claude, Cursor, Windsurf
 
 ## Models
 
-Midjourney covers 3 model variants across 5 endpoints. Each tool accepts the models listed for it:
+Midjourney covers 3 model variants across 6 endpoints. Each tool accepts the models listed for it:
 
 | Tool | Models |
 |---|---|
@@ -94,6 +95,7 @@ Midjourney covers 3 model variants across 5 endpoints. Each tool accepts the mod
 | `get_seed` | _no model parameter_ |
 | `image_to_prompt` | _no model parameter_ |
 | `image_to_video` | `midjourney-image-to-video` |
+| `shorten_prompt` | _no model parameter_ |
 | `text_to_image` | `midjourney-v8.1` |
 
 Model availability can change between releases. Use `check_pricing` or the [Midjourney model page](https://runapi.ai/models/midjourney) for the current catalog view.

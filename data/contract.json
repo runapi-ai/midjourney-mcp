@@ -105,6 +105,20 @@
         }
       }
     },
+    "midjourney/shorten-prompt": {
+      "model": "Midjourney",
+      "endpoint": "shorten_prompt",
+      "task_type": "synchronous",
+      "models": [],
+      "fields_by_model": {
+        "_": {
+          "prompt": {
+            "type": "string",
+            "required": true
+          }
+        }
+      }
+    },
     "midjourney/text-to-image": {
       "model": "Midjourney",
       "endpoint": "text_to_image",
