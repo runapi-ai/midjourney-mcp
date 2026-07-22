@@ -38,6 +38,28 @@
         }
       }
     },
+    "midjourney/extend-video": {
+      "model": "Midjourney",
+      "endpoint": "extend_video",
+      "task_type": "asynchronous",
+      "models": [
+        "midjourney-image-to-video"
+      ],
+      "fields_by_model": {
+        "midjourney-image-to-video": {
+          "source_task_id": {
+            "type": "string",
+            "required": true
+          },
+          "prompt": {
+            "type": "string"
+          },
+          "callback_url": {
+            "type": "string"
+          }
+        }
+      }
+    },
     "midjourney/get-seed": {
       "model": "Midjourney",
       "endpoint": "get_seed",

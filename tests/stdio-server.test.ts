@@ -45,7 +45,7 @@ describe("midjourney stdio MCP server", () => {
 
     const tools = await client.listTools();
     const names = tools.tools.map((tool) => tool.name).sort();
-    expect(names).toEqual(["check_pricing","edit_image","get_seed","get_task","image_to_prompt","image_to_video","login","shorten_prompt","text_to_image"]);
+    expect(names).toEqual(["check_pricing","edit_image","extend_video","get_seed","get_task","image_to_prompt","image_to_video","login","shorten_prompt","text_to_image"]);
 
     for (const endpoint of ["get_seed","image_to_prompt","shorten_prompt"]) {
       const tool = tools.tools.find((candidate) => candidate.name === endpoint);
@@ -72,7 +72,7 @@ describe("midjourney stdio MCP server", () => {
 
     // A model offered on several endpoints must report every endpoint's price
     // without naming one, not silently price only the first endpoint found.
-    const multiEndpointModels: Record<string, string[]> = {};
+    const multiEndpointModels: Record<string, string[]> = {"midjourney-image-to-video":["extend_video","image_to_video"]};
     for (const [model, actions] of Object.entries(multiEndpointModels)) {
       const spread = await client.callTool({ name: "check_pricing", arguments: { model } });
       const spreadContent = spread.content?.[0];
@@ -82,5 +82,7 @@ describe("midjourney stdio MCP server", () => {
       const parsed = JSON.parse(spreadContent.text) as { endpoints?: { action: string }[] };
       expect(parsed.endpoints?.map((entry) => entry.action).sort(), `check_pricing should price ${model} on every endpoint`).toEqual([...actions].sort());
     }
+
+
   });
 });

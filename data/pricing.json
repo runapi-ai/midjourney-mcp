@@ -3,6 +3,9 @@
     "midjourney-edit-image/edit_image": {
       "unit_price_cents": 8
     },
+    "midjourney-image-to-video/extend_video": {
+      "unit_price_cents": 62
+    },
     "midjourney-image-to-video/image_to_video": {
       "unit_price_cents": 62
     },
