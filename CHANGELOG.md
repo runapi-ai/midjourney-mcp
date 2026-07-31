@@ -1,5 +1,11 @@
 # Changelog
 
+## [v0.3.1](https://github.com/runapi-ai/midjourney-mcp/releases/tag/v0.3.1) - 2026-07-31
+
+### Changed
+- Resolve MCP prices from the RunAPI Price Schedule API instead of embedded package data.
+
+
 ## [v0.3.0](https://github.com/runapi-ai/midjourney-mcp/releases/tag/v0.3.0) - 2026-07-22
 
 ### Added

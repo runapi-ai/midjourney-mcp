@@ -74,15 +74,15 @@ Ready-made examples are in [`examples/`](examples/) for Claude, Cursor, Windsurf
 
 | Tool | Auth | Purpose |
 |---|---|---|
-| `edit_image` | Yes | Create a Midjourney edit image task and optionally wait for a terminal status. Returns the task id, status, output URLs, and pricing snapshot. |
-| `extend_video` | Yes | Create a Midjourney extend video task and optionally wait for a terminal status. Returns the task id, status, output URLs, and pricing snapshot. |
-| `get_seed` | Yes | Run a Midjourney get seed operation synchronously. Returns the operation result and pricing snapshot. |
-| `image_to_prompt` | Yes | Run a Midjourney image to prompt operation synchronously. Returns the operation result and pricing snapshot. |
-| `image_to_video` | Yes | Create a Midjourney image to video task and optionally wait for a terminal status. Returns the task id, status, output URLs, and pricing snapshot. |
-| `shorten_prompt` | Yes | Run a Midjourney shorten prompt operation synchronously. Returns the operation result and pricing snapshot. |
-| `text_to_image` | Yes | Create a Midjourney text to image task and optionally wait for a terminal status. Returns the task id, status, output URLs, and pricing snapshot. |
+| `edit_image` | Yes | Create a Midjourney edit image task and optionally wait for a terminal status. Returns the task id, status, and output URLs. |
+| `extend_video` | Yes | Create a Midjourney extend video task and optionally wait for a terminal status. Returns the task id, status, and output URLs. |
+| `get_seed` | Yes | Run a Midjourney get seed operation synchronously. Returns the operation result. |
+| `image_to_prompt` | Yes | Run a Midjourney image to prompt operation synchronously. Returns the operation result. |
+| `image_to_video` | Yes | Create a Midjourney image to video task and optionally wait for a terminal status. Returns the task id, status, and output URLs. |
+| `shorten_prompt` | Yes | Run a Midjourney shorten prompt operation synchronously. Returns the operation result. |
+| `text_to_image` | Yes | Create a Midjourney text to image task and optionally wait for a terminal status. Returns the task id, status, and output URLs. |
 | `get_task` | Yes | Fetch the current status and latest payload for an existing task. |
-| `check_pricing` | No | Look up the current pricing snapshot for a Midjourney model and endpoint. |
+| `check_pricing` | No | Look up current pricing for a Midjourney model and endpoint. |
 
 ---
 
