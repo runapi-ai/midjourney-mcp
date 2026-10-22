@@ -1,5 +1,12 @@
 # Changelog
 
+## [v0.4.1](https://github.com/runapi-ai/midjourney-mcp/releases/tag/v0.4.1) - 2026-10-22
+
+### Fixed
+- Upgrade @modelcontextprotocol/sdk to ^1.32.1 to address security advisories.
+- Update @runapi.ai/mcp-core from 0.5.0 to 0.6.0.
+
+
 ## [v0.4.0](https://github.com/runapi-ai/midjourney-mcp/releases/tag/v0.4.0) - 2026-09-30
 
 ### Changed
